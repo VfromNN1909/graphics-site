@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home,
+.reports,
+.products {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-img {
+    /* The image used */
+    background-image: url("../src/assets/shutterstock_579867070.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.welcome-header {
+    margin-top: 10rem;
 }
 
-.App-link {
-  color: #61dafb;
+.welcome-deco {
+    color: white;
+    letter-spacing: -1px;
+    border-radius: 30px;
+    background: rgb(0, 0, 0); /* на случай, если следующая строка не сработает */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.marquee {
+    width: 450px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    letter-spacing: -1px;
+    border-radius: 30px;
+    color: white;
+    background: rgb(0, 0, 0); /* на случай, если следующая строка не сработает */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-top: 1.3rem;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee span:hover {
+    animation-play-state: paused
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.welcome-wrapper {
+    margin-left: auto;
+    margin-right: auto;
 }

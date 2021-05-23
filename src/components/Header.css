@@ -1,0 +1,77 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 760px;
+    background: rgb(50, 50, 50);
+    background: url("../assets/shutterstock_579867070.jpg") no-repeat 50% 50% fixed;
+    background-size: 130%;
+    overflow: hidden;
+}
+nav {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Ubuntu;
+    letter-spacing: 1px;
+}
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: .3em;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: .2em 2em;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: .2em .7em;
+    font-weight: bold;
+}
+
+nav a {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-family: Ubuntu;
+    font-size: 1.15em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    transition: .25s ease-in-out;
+}
+
+nav a:hover {
+    color: rgb(220, 120, 0);
+}
+
+.nav-bg {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgb(50, 50, 50);
+    transition: .45s ease-in-out;
+}
